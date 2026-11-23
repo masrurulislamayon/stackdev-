@@ -1,0 +1,21 @@
+{
+  "name": "Stack Dev",
+  "short_name": "Stack Dev",
+  "description": "High-performance web platforms, Flutter mobile apps, and UI/UX design from Savar, Dhaka, Bangladesh.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07070C",
+  "theme_color": "#5B5BF0",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

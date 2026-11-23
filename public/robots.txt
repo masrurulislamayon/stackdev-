@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /portal/
+
+Sitemap: https://stackdev.tech/sitemap.xml

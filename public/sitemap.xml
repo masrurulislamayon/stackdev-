@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://stackdev.tech/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/services</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/services?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/services?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/services" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/pricing</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/pricing?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/pricing?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/pricing" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/work</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/work?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/work?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/work" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/about</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/about?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/about?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/about" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/blog</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/blog?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/blog?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/blog" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/contact</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/contact?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/contact?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/contact" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/faq</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/faq?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/faq?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/faq" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/privacy-policy</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/privacy-policy?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/privacy-policy?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/privacy-policy" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/terms</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/terms?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/terms?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/terms" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/refund-policy</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/refund-policy?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/refund-policy?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/refund-policy" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/services/custom-web-development</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/services/custom-web-development?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/services/custom-web-development?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/services/custom-web-development" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/services/flutter-mobile-apps</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/services/flutter-mobile-apps?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/services/flutter-mobile-apps?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/services/flutter-mobile-apps" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/services/ui-ux-design</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/services/ui-ux-design?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/services/ui-ux-design?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/services/ui-ux-design" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/services/ecommerce-solutions</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/services/ecommerce-solutions?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/services/ecommerce-solutions?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/services/ecommerce-solutions" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/services/web-applications</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/services/web-applications?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/services/web-applications?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/services/web-applications" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/services/portfolio-websites</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/services/portfolio-websites?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/services/portfolio-websites?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/services/portfolio-websites" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/work/universal-unit-converter</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/work/universal-unit-converter?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/work/universal-unit-converter?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/work/universal-unit-converter" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/work/automated-social-media-ad-creation</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/work/automated-social-media-ad-creation?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/work/automated-social-media-ad-creation?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/work/automated-social-media-ad-creation" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/blog/how-much-does-a-website-cost-in-bangladesh-2026</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/blog/how-much-does-a-website-cost-in-bangladesh-2026?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/blog/how-much-does-a-website-cost-in-bangladesh-2026?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/blog/how-much-does-a-website-cost-in-bangladesh-2026" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/blog/flutter-vs-native-apps-which-is-right</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/blog/flutter-vs-native-apps-which-is-right?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/blog/flutter-vs-native-apps-which-is-right?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/blog/flutter-vs-native-apps-which-is-right" />
+  </url>
+  <url>
+    <loc>https://stackdev.tech/blog/how-to-build-a-portfolio-website-as-a-student</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stackdev.tech/blog/how-to-build-a-portfolio-website-as-a-student?lang=en" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://stackdev.tech/blog/how-to-build-a-portfolio-website-as-a-student?lang=bn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stackdev.tech/blog/how-to-build-a-portfolio-website-as-a-student" />
+  </url>
+</urlset>
