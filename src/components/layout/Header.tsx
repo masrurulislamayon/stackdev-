@@ -4,7 +4,6 @@ import { m } from 'motion/react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { buttonStyles, LanguageToggle, Logo, ThemeToggle } from '@/src/components/ui';
 import { useTranslation, type TranslationKey } from '@/src/i18n';
-import { track } from '@/src/lib/analytics';
 import { cn } from '@/src/lib/cn';
 
 const NAV_ITEMS: ReadonlyArray<{ to: string; labelKey: TranslationKey }> = [
@@ -173,18 +172,6 @@ export function Header() {
               <ThemeToggle />
 
               <Link
-                to="/portal/login"
-                onClick={() => track('click_client_login', { location: 'header_desktop' })}
-                className={buttonStyles({
-                  variant: 'secondary',
-                  size: 'sm',
-                  className: 'hidden md:inline-flex',
-                })}
-              >
-                {t('nav.clientLogin')}
-              </Link>
-
-              <Link
                 to="/contact"
                 className={buttonStyles({
                   variant: 'primary',
@@ -281,18 +268,7 @@ export function Header() {
             </nav>
 
             <div className="mt-8 space-y-5 border-t border-border pt-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <Link
-                  to="/portal/login"
-                  onClick={() => track('click_client_login', { location: 'header_mobile' })}
-                  className={buttonStyles({
-                    variant: 'secondary',
-                    size: 'md',
-                    className: 'w-full',
-                  })}
-                >
-                  {t('nav.clientLogin')}
-                </Link>
+              <div className="grid grid-cols-1 gap-3">
                 <Link
                   to="/contact"
                   className={buttonStyles({

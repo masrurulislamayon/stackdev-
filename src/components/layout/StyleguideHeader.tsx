@@ -25,9 +25,6 @@ export function StyleguideHeader() {
             <a href="#typography" className="hover:text-fg transition-colors whitespace-nowrap shrink-0">
               {t('nav.pricing')}
             </a>
-            <a href="#components" className="hover:text-fg transition-colors whitespace-nowrap shrink-0">
-              {t('nav.clientPortal')}
-            </a>
             <a href="#forms" className="hover:text-fg transition-colors whitespace-nowrap shrink-0">
               {t('nav.contact')}
             </a>

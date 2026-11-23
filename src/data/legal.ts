@@ -25,8 +25,8 @@ export const LEGAL_DOCUMENTS: Record<LegalDocKey, LegalDocument> = {
       bn: 'প্রাইভেসি পলিসি',
     },
     subtitle: {
-      en: 'How Stack Dev collects, uses, and protects information submitted through this website and the Client Portal.',
-      bn: 'এই ওয়েবসাইট এবং Client Portal-এর মাধ্যমে সংগৃহীত তথ্য Stack Dev কীভাবে ব্যবহার ও সংরক্ষণ করে।',
+      en: 'How Stack Dev collects, uses, and protects information submitted through this website.',
+      bn: 'এই ওয়েবসাইটের মাধ্যমে সংগৃহীত তথ্য Stack Dev কীভাবে ব্যবহার ও সংরক্ষণ করে।',
     },
     lastUpdated: {
       en: 'November 14, 2026',
@@ -41,8 +41,8 @@ export const LEGAL_DOCUMENTS: Record<LegalDocKey, LegalDocument> = {
         },
         paragraphs: [
           {
-            en: 'When you submit a consultation request via the contact form or use the Client Portal as an active client, Stack Dev collects only the information needed to communicate and deliver your project:',
-            bn: 'আপনি কন্টাক্ট ফর্মে কনসালটেশনের অনুরোধ পাঠালে অথবা Client Portal ব্যবহার করলে, প্রজেক্ট যোগাযোগ ও ডেলিভারির জন্য প্রয়োজনীয় তথ্যই কেবল সংগ্রহ করা হয়:',
+            en: 'When you submit a consultation request via the contact form, Stack Dev collects only the information needed to communicate and deliver your project:',
+            bn: 'আপনি কন্টাক্ট ফর্মে কনসালটেশনের অনুরোধ পাঠালে, প্রজেক্ট যোগাযোগ ও ডেলিভারির জন্য প্রয়োজনীয় তথ্যই কেবল সংগ্রহ করা হয়:',
           },
         ],
         bullets: [
@@ -59,8 +59,8 @@ export const LEGAL_DOCUMENTS: Record<LegalDocKey, LegalDocument> = {
             bn: 'প্রজেক্টের বিবরণ, নির্বাচিত সেবা বা প্যাকেজ, বাজেট পরিসর এবং বার্তা',
           },
           {
-            en: 'Files, documents, briefs, and messages shared inside the Client Portal',
-            bn: 'Client Portal-এ শেয়ার করা ফাইল, ডকুমেন্ট, ব্রিফ এবং মেসেজসমূহ',
+            en: 'Project briefs, files, and messages shared directly during your engagement',
+            bn: 'প্রজেক্ট চলাকালীন সরাসরি শেয়ার করা ফাইল, ডকুমেন্ট, ব্রিফ এবং মেসেজসমূহ',
           },
         ],
       },
@@ -119,8 +119,8 @@ export const LEGAL_DOCUMENTS: Record<LegalDocKey, LegalDocument> = {
         },
         paragraphs: [
           {
-            en: 'Reasonable technical and access-control measures are applied to protect inquiry details and Client Portal files from unauthorized access. However, no internet transmission or storage system can be guaranteed completely secure.',
-            bn: 'আপনার প্রজেক্টের তথ্য ও Client Portal-এর ফাইল অননুমোদিত অ্যাক্সেস থেকে সুরক্ষিত রাখতে যৌক্তিক নিরাপত্তামূলক ব্যবস্থা গ্রহণ করা হয়। তবে ইন্টারনেটের মাধ্যমে কোনো তথ্য আদান-প্রদান শতভাগ ঝুঁকিমুক্ত নয়।',
+            en: 'Reasonable technical and access-control measures are applied to protect inquiry details and project files from unauthorized access. However, no internet transmission or storage system can be guaranteed completely secure.',
+            bn: 'আপনার প্রজেক্টের তথ্য ও ফাইল অননুমোদিত অ্যাক্সেস থেকে সুরক্ষিত রাখতে যৌক্তিক নিরাপত্তামূলক ব্যবস্থা গ্রহণ করা হয়। তবে ইন্টারনেটের মাধ্যমে কোনো তথ্য আদান-প্রদান শতভাগ ঝুঁকিমুক্ত নয়।',
           },
           {
             en: '[TO CONFIRM] Define exact retention duration for inquiry records and completed project files, or how clients can request deletion.',

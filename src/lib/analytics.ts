@@ -4,7 +4,6 @@ export type AnalyticsEventName =
   | 'click_messenger'
   | 'submit_contact_form'
   | 'view_pricing'
-  | 'click_client_login'
   | 'click_package'
   | 'language_change';
 

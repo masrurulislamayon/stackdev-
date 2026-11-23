@@ -36,10 +36,28 @@ function BrowserMockupFrame({
 export function ProjectThumbnail({
   variant,
   label,
+  src,
+  priority = false,
 }: {
   variant: 'converter' | 'ad-automation';
   label: string;
+  src?: string;
+  priority?: boolean;
 }) {
+  if (src) {
+    return (
+      <div className="relative aspect-[2/1] w-full overflow-hidden rounded-[16px] border border-border bg-bg-subtle shadow-[var(--shadow-sm)] select-none">
+        <img
+          src={src}
+          alt={label}
+          className="h-full w-full object-cover"
+          loading={priority ? 'eager' : 'lazy'}
+          decoding="async"
+        />
+      </div>
+    );
+  }
+
   if (variant === 'converter') {
     return (
       <BrowserMockupFrame label={label}>

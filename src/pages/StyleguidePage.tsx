@@ -160,8 +160,8 @@ export function StyleguidePage() {
         <SectionBand id="brand">
           <SectionHeading
             eyebrow="Brand Identity"
-            title="Plus Jakarta Sans Wordmark & Gradient Stack"
-            description="Always written as Stack Dev in English across both language modes, paired with a layered-stack SVG glyph."
+            title="Stack Dev Wordmark & Brand Tile"
+            description="Always written as Stack Dev in English across both language modes, paired with the dark-navy rounded tile and cyan-to-violet layered code-stack mark."
           />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             <Card className="flex flex-col justify-between gap-4">
@@ -372,8 +372,6 @@ export function StyleguidePage() {
                   <span>{t('nav.about')}</span>
                   <span aria-hidden="true">·</span>
                   <span>{t('nav.contact')}</span>
-                  <span aria-hidden="true">·</span>
-                  <span>{t('nav.clientPortal')}</span>
                 </div>
 
                 <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-border">

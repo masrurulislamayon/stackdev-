@@ -8,6 +8,7 @@ export type ProjectSlug =
 export interface ProjectItem {
   slug: ProjectSlug;
   thumbnailVariant: 'converter' | 'ad-automation';
+  thumbnailSrc: string;
   title: LocalizedText;
   category: LocalizedText;
   shortDescription: LocalizedText;
@@ -21,7 +22,6 @@ export interface ProjectItem {
     problem: LocalizedText;
     solution: LocalizedText;
     keyFeatures: LocalizedText[];
-    // Editable placeholder — keep factual and do not invent metrics.
     resultPlaceholder: LocalizedText;
   };
 }
@@ -30,6 +30,7 @@ export const PROJECTS: ProjectItem[] = [
   {
     slug: 'universal-unit-converter',
     thumbnailVariant: 'converter',
+    thumbnailSrc: '/assets/aistudio/Universal_Unit_Converter_72a26f8b.jpg',
     title: {
       en: 'Universal Unit Converter',
       bn: 'Universal Unit Converter',
@@ -39,53 +40,53 @@ export const PROJECTS: ProjectItem[] = [
       bn: 'ওয়েব অ্যাপ্লিকেশন',
     },
     shortDescription: {
-      en: 'A fast web application for clean, multi-category unit conversions built with modern React and TypeScript.',
-      bn: 'আধুনিক React এবং TypeScript দিয়ে তৈরি দ্রুতগতির ও পরিচ্ছন্ন ইউনিট কনভার্সন ওয়েব অ্যাপ্লিকেশন।',
+      en: 'High-precision unit conversions across 60 categories and 1,416 total units, built with modern React and TypeScript.',
+      bn: '৬০টি ক্যাটাগরি ও ১,৪১৬টি ইউনিটসহ আধুনিক React ও TypeScript দিয়ে তৈরি দ্রুতগতির ও নির্ভুল ইউনিট কনভার্টার ওয়েব অ্যাপ্লিকেশন।',
     },
     techStack: ['React 19', 'TypeScript', 'Vite', 'GitHub', 'Vercel'],
-    liveDemoUrl: '', // TODO: Add Live Demo URL for Universal Unit Converter
-    githubUrl: '', // TODO: Add GitHub URL for Universal Unit Converter
+    liveDemoUrl: 'https://unitconverter-smoky-eight.vercel.app/',
+    githubUrl: '',
     caseStudy: {
       overview: {
-        en: 'Universal Unit Converter is a personal web application focused on fast, clutter-free unit conversion across everyday and technical measurement categories.',
-        bn: 'Universal Unit Converter একটি ব্যক্তিগত ওয়েব অ্যাপ্লিকেশন, যা দৈনন্দিন ও টেকনিক্যাল পরিমাপের ইউনিট দ্রুত এবং ঝামেলাহীনভাবে রূপান্তরের জন্য তৈরি।',
+        en: 'Universal Unit Converter is a personal web application focused on fast, high-precision unit conversion across 60 measurement categories and 1,416 units for engineering and everyday use.',
+        bn: 'Universal Unit Converter একটি ব্যক্তিগত ওয়েব অ্যাপ্লিকেশন, যা ইঞ্জিনিয়ারিং ও দৈনন্দিন ব্যবহারের জন্য ৬০টি ক্যাটাগরি এবং ১,৪১৬টি ইউনিটে দ্রুত ও নির্ভুল রূপান্তরের জন্য তৈরি।',
       },
       problem: {
         en: 'Many online unit converters are overloaded with ads, slow page reloads, and confusing layouts—especially on mobile screens when someone needs a quick conversion.',
         bn: 'অনলাইনে থাকা অনেক ইউনিট কনভার্টার বিজ্ঞাপন, ধীরগতির লোডিং এবং অগোছালো লেআউটের কারণে মোবাইলে দ্রুত ব্যবহারের ক্ষেত্রে বিরক্তিকর হয়ে ওঠে।',
       },
       solution: {
-        en: 'Built a lightweight single-page web application with React 19, TypeScript, and Vite so conversions happen instantly on the client with clean category switching and responsive mobile controls.',
-        bn: 'React 19, TypeScript এবং Vite ব্যবহার করে একটি হালকা ও দ্রুতগতির ওয়েব অ্যাপ্লিকেশন তৈরি করা হয়েছে, যেখানে কোনো পেজ রিলোড ছাড়াই তাৎক্ষণিকভাবে ইউনিট রূপান্তর করা যায়।',
+        en: 'Built a lightweight single-page web application with React 19, TypeScript, and Vite so conversions happen instantly on the client with searchable categories, pinned favorites, conversion formulas, and a unit scale visualizer.',
+        bn: 'React 19, TypeScript এবং Vite ব্যবহার করে একটি হালকা ও দ্রুতগতির ওয়েব অ্যাপ্লিকেশন তৈরি করা হয়েছে, যেখানে সার্চযোগ্য ক্যাটাগরি, পিনড ফেভারিট, কনভার্শন ফর্মুলা ও ইউনিট স্কেল ভিজ্যুয়ালাইজারসহ তাৎক্ষণিক রূপান্তর করা যায়।',
       },
       keyFeatures: [
         {
-          en: 'Instant client-side unit conversion without page reloads',
-          bn: 'পেজ রিলোড ছাড়াই তাৎক্ষণিক ক্লায়েন্ট-সাইড ইউনিট কনভার্সন',
+          en: 'High-precision conversion across 60 categories and 1,416 units',
+          bn: '৬০টি ক্যাটাগরি এবং ১,৪১৬টি ইউনিটে নির্ভুল কনভার্শন সুবিধা',
         },
         {
-          en: 'Type-safe conversion logic written in TypeScript',
-          bn: 'TypeScript-এ লেখা টাইপ-সেফ কনভার্সন লজিক',
+          en: 'Instant conversion formula display and interactive unit scale visualizer',
+          bn: 'তাৎক্ষণিক কনভার্শন ফর্মুলা প্রদর্শন ও ইউনিট স্কেল ভিজ্যুয়ালাইজার',
         },
         {
-          en: 'Mobile-first responsive layout optimized for quick one-hand input',
-          bn: 'দ্রুত ব্যবহারের জন্য মোবাইল-ফার্স্ট রেসপন্সিভ লেআউট',
+          en: 'Mobile-first responsive layout with search and pinned favorites',
+          bn: 'সার্চ ও পিনড ফেভারিটসহ মোবাইল-ফার্স্ট রেসপন্সিভ লেআউট',
         },
         {
-          en: 'Clean deployment workflow using GitHub and Vercel',
-          bn: 'GitHub এবং Vercel-এর মাধ্যমে পরিচ্ছন্ন ডিপ্লয়মেন্ট ওয়ার্কফ্লো',
+          en: 'Live production deployment on Vercel',
+          bn: 'Vercel-এ লাইভ প্রোডাকশন ডিপ্লয়মেন্ট',
         },
       ],
-      // TODO: Replace with verified outcome/deployment notes when ready
       resultPlaceholder: {
-        en: 'Editable placeholder: Add verified deployment notes, feedback, or outcome details here once ready.',
-        bn: 'সম্পাদনাযোগ্য স্থান: প্রজেক্টের যাচাইকৃত ফলাফল বা ডিপ্লয়মেন্ট নোট প্রস্তুত হলে এখানে যুক্ত করুন।',
+        en: 'Live in production on Vercel, delivering instant client-side conversions across 60 categories and 1,416 total units.',
+        bn: 'Vercel-এ লাইভ প্রোডাকশনে চালু রয়েছে, যেখানে ৬০টি ক্যাটাগরি এবং ১,৪১৬টি ইউনিটে তাৎক্ষণিক ক্লায়েন্ট-সাইড কনভার্শন সুবিধা পাওয়া যাচ্ছে।',
       },
     },
   },
   {
     slug: 'automated-social-media-ad-creation',
     thumbnailVariant: 'ad-automation',
+    thumbnailSrc: '/assets/aistudio/Adcraft_ca461f58.jpg',
     title: {
       en: 'Automated Social Media Ad Creation and Management',
       bn: 'Automated Social Media Ad Creation and Management',
@@ -95,8 +96,8 @@ export const PROJECTS: ProjectItem[] = [
       bn: 'ওয়েব অ্যাপ্লিকেশন',
     },
     shortDescription: {
-      en: 'A web application integrating AI-assisted ad drafting with Firestore persistence and Meta Remote MCP workflows.',
-      bn: 'Firestore ডেটাবেস, Google Gen AI SDK এবং Meta Remote MCP ওয়ার্কফ্লো সমন্বিত সোশ্যাল মিডিয়া অ্যাড তৈরি ও ব্যবস্থাপনার ওয়েব অ্যাপ্লিকেশন।',
+      en: 'AdCraft AI is a web-based application designed to automate end-to-end social media advertising for small businesses, startups, and content creators.',
+      bn: 'AdCraft AI ছোট ব্যবসা, স্টার্টআপ ও কনটেন্ট ক্রিয়েটরদের সোশ্যাল মিডিয়া অ্যাড তৈরি ও ব্যবস্থাপনা স্বয়ংক্রিয় করার ওয়েব অ্যাপ্লিকেশন।',
     },
     techStack: [
       'React',
@@ -107,12 +108,12 @@ export const PROJECTS: ProjectItem[] = [
       'Google Gen AI SDK',
       'Meta Remote MCP',
     ],
-    liveDemoUrl: '', // TODO: Add Live Demo URL for Automated Social Media Ad Creation and Management
-    githubUrl: '', // TODO: Add GitHub URL for Automated Social Media Ad Creation and Management
+    liveDemoUrl: '',
+    githubUrl: 'https://github.com/masrurulislam01/Adcraft',
     caseStudy: {
       overview: {
-        en: 'A product-focused web application built to structure social media ad drafting, asset organization, and campaign management workflows in one unified interface.',
-        bn: 'সোশ্যাল মিডিয়া অ্যাড ড্রাফটিং, কনটেন্ট সংরক্ষণ এবং ক্যাম্পেইন ম্যানেজমেন্ট ওয়ার্কফ্লো একটি ইউনিফাইড ইন্টারফেসে সাজানোর জন্য নির্মিত ওয়েব অ্যাপ্লিকেশন।',
+        en: 'AdCraft AI is a product-focused web application built to automate end-to-end social media ad drafting, creative generation, asset organization, and campaign management in one unified studio.',
+        bn: 'AdCraft AI একটি প্রোডাক্ট-কেন্দ্রিক ওয়েব অ্যাপ্লিকেশন, যা সোশ্যাল মিডিয়া অ্যাড ড্রাফটিং, ক্রিয়েটিভ তৈরি, অ্যাসেট সংরক্ষণ এবং ক্যাম্পেইন ব্যবস্থাপনা এক জায়গায় সহজ করার জন্য নির্মিত।',
       },
       problem: {
         en: 'Preparing ad copy variations, keeping campaign records organized, and coordinating publishing steps across disconnected tools creates repetitive manual overhead.',
@@ -140,10 +141,9 @@ export const PROJECTS: ProjectItem[] = [
           bn: 'Vite-এ নির্মিত রেসপন্সিভ React ও TypeScript ইন্টারফেস',
         },
       ],
-      // TODO: Replace with verified outcome/deployment notes when ready
       resultPlaceholder: {
-        en: 'Editable placeholder: Add verified deployment notes, feedback, or outcome details here once ready.',
-        bn: 'সম্পাদনাযোগ্য স্থান: প্রজেক্টের যাচাইকৃত ফলাফল বা ডিপ্লয়মেন্ট নোট প্রস্তুত হলে এখানে যুক্ত করুন।',
+        en: 'Source code is available on GitHub (Adcraft) featuring full campaign workspace, brand asset organization, and AI-assisted brief generation.',
+        bn: 'সম্পূর্ণ সোর্স কোড GitHub-এ (Adcraft) উন্মুক্ত রয়েছে, যেখানে ক্যাম্পেইন ওয়ার্কস্পেস, ব্র্যান্ড অ্যাসেট ব্যবস্থাপনা ও AI-সহায়তাযুক্ত অ্যাড ব্রিফ তৈরির সুবিধা রয়েছে।',
       },
     },
   },

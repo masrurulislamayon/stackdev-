@@ -106,7 +106,12 @@ export function WorkDetailPage() {
             </div>
 
             <div className="lg:col-span-6">
-              <ProjectThumbnail variant={project.thumbnailVariant} label={title} />
+              <ProjectThumbnail
+                variant={project.thumbnailVariant}
+                src={project.thumbnailSrc}
+                label={title}
+                priority
+              />
             </div>
           </div>
         </Container>

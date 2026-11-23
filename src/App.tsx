@@ -52,9 +52,6 @@ const FaqPage = lazy(() =>
 const LegalPage = lazy(() =>
   import('@/src/pages/LegalPage').then((m) => ({ default: m.LegalPage }))
 );
-const PlaceholderPage = lazy(() =>
-  import('@/src/pages/PlaceholderPage').then((m) => ({ default: m.PlaceholderPage }))
-);
 const NotFoundPage = lazy(() =>
   import('@/src/pages/NotFoundPage').then((m) => ({ default: m.NotFoundPage }))
 );
@@ -115,14 +112,6 @@ export default function App() {
                       <Route path="/privacy-policy" element={<LegalPage docKey="privacy" />} />
                       <Route path="/terms" element={<LegalPage docKey="terms" />} />
                       <Route path="/refund-policy" element={<LegalPage docKey="refund" />} />
-                      <Route
-                        path="/portal/login"
-                        element={<PlaceholderPage titleKey="nav.clientLogin" noindex />}
-                      />
-                      <Route
-                        path="/portal/*"
-                        element={<PlaceholderPage titleKey="nav.clientPortal" noindex />}
-                      />
                       <Route path="*" element={<NotFoundPage />} />
                     </Route>
 

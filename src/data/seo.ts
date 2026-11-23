@@ -23,8 +23,6 @@ export type StaticSeoKey =
   | 'privacy'
   | 'terms'
   | 'refund'
-  | 'portalLogin'
-  | 'portalDashboard'
   | 'styleguide'
   | 'notFound';
 
@@ -115,8 +113,8 @@ export const STATIC_SEO: Record<StaticSeoKey, SeoMeta> = {
       bn: 'প্রাইভেসি পলিসি | Stack Dev বাংলাদেশ',
     },
     description: {
-      en: 'Learn how Stack Dev collects, uses, and protects contact form inquiries, Client Portal files, and browser preferences without selling your personal data.',
-      bn: 'Stack Dev কীভাবে কন্টাক্ট ফর্মের তথ্য, Client Portal ফাইল ও ব্রাউজার পছন্দ নিরাপদে সংরক্ষণ করে এবং কখনো ব্যক্তিগত তথ্য বিক্রি করে না তা বিস্তারিত জানুন।',
+      en: 'Learn how Stack Dev collects, uses, and protects contact form inquiries, project files, and browser preferences without selling your personal data.',
+      bn: 'Stack Dev কীভাবে কন্টাক্ট ফর্মের তথ্য, প্রজেক্ট ফাইল ও ব্রাউজার পছন্দ নিরাপদে সংরক্ষণ করে এবং কখনো ব্যক্তিগত তথ্য বিক্রি করে না তা বিস্তারিত জানুন।',
     },
   },
   terms: {
@@ -137,26 +135,6 @@ export const STATIC_SEO: Record<StaticSeoKey, SeoMeta> = {
     description: {
       en: 'Read Stack Dev template refund and cancellation guidelines for pre-start cancellations, active milestone work, third-party costs, and direct project review.',
       bn: 'Stack Dev-এর প্রজেক্ট বাতিলকরণ ও রিফান্ড সংক্রান্ত খসড়া নীতিমালা—কাজ শুরুর আগের বাতিল, চলমান মাইলস্টোন, তৃতীয় পক্ষের খরচ ও পর্যালোচনার নিয়মগুলো জানুন।',
-    },
-  },
-  portalLogin: {
-    title: {
-      en: 'Client Portal Login | Stack Dev Project Workspace',
-      bn: 'ক্লায়েন্ট পোর্টাল লগইন | Stack Dev প্রজেক্ট ওয়ার্কস্পেস',
-    },
-    description: {
-      en: 'Sign in to the Stack Dev Client Portal to track project milestones, shared deliverables, direct messages, and invoices for your active development project.',
-      bn: 'আপনার চলমান প্রজেক্টের মাইলস্টোন, শেয়ার করা ফাইল, সরাসরি মেসেজ এবং ইনভয়েস দেখতে Stack Dev ক্লায়েন্ট পোর্টালে লগইন করে কাজের অগ্রগতি সহজে ট্র্যাক করুন।',
-    },
-  },
-  portalDashboard: {
-    title: {
-      en: 'Client Portal Workspace | Stack Dev Bangladesh',
-      bn: 'ক্লায়েন্ট পোর্টাল ওয়ার্কস্পেস | Stack Dev বাংলাদেশ',
-    },
-    description: {
-      en: 'Access your private Stack Dev Client Portal dashboard to check active development milestones, download files, send messages, and review billing statements.',
-      bn: 'আপনার প্রজেক্টের চলমান ধাপ, শেয়ার করা ফাইল ডাউনলোড, সরাসরি মেসেজ আদান-প্রদান এবং পেমেন্ট হিসাব দেখতে Stack Dev ক্লায়েন্ট পোর্টাল ওয়ার্কস্পেস ব্যবহার করুন।',
     },
   },
   styleguide: {

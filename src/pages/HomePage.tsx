@@ -32,11 +32,6 @@ const PricingSection = lazy(() =>
     default: m.PricingSection,
   }))
 );
-const ClientPortalSection = lazy(() =>
-  import('@/src/components/sections/ClientPortalSection').then((m) => ({
-    default: m.ClientPortalSection,
-  }))
-);
 const FaqSection = lazy(() =>
   import('@/src/components/sections/FaqSection').then((m) => ({
     default: m.FaqSection,
@@ -95,12 +90,6 @@ export function HomePage() {
       <DeferredSection minHeight={640}>
         <Suspense fallback={<SectionSkeleton minHeight={640} />}>
           <PricingSection />
-        </Suspense>
-      </DeferredSection>
-
-      <DeferredSection minHeight={480}>
-        <Suspense fallback={<SectionSkeleton minHeight={480} />}>
-          <ClientPortalSection />
         </Suspense>
       </DeferredSection>
 

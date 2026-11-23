@@ -2,8 +2,6 @@ import { ArrowRight } from 'lucide-react';
 import { Link, useLocation, useParams } from 'react-router-dom';
 import { Seo } from '@/src/components/seo';
 import { buttonStyles, Container, Logo, SectionHeading } from '@/src/components/ui';
-import { STATIC_SEO } from '@/src/data/seo';
-import { pickLocalized } from '@/src/data/services';
 import { useTranslation, type TranslationKey } from '@/src/i18n';
 
 export interface PlaceholderPageProps {
@@ -25,20 +23,18 @@ export function PlaceholderPage({
   showSlug = false,
   noindex = false,
 }: PlaceholderPageProps) {
-  const { locale, t } = useTranslation();
+  const { t } = useTranslation();
   const { pathname } = useLocation();
   const { slug } = useParams<{ slug: string }>();
 
   const baseTitle = t(titleKey);
   const headingTitle = showSlug && slug ? `${baseTitle}: ${formatSlug(slug)}` : baseTitle;
-  const meta =
-    titleKey === 'nav.clientLogin' ? STATIC_SEO.portalLogin : STATIC_SEO.portalDashboard;
 
   return (
     <>
       <Seo
-        title={pickLocalized(meta.title, locale)}
-        description={pickLocalized(meta.description, locale)}
+        title={`${headingTitle} | Stack Dev`}
+        description={t('placeholder.description')}
         path={pathname}
         noindex={noindex}
       />

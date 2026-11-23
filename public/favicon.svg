@@ -1,13 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 64 64" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
   <defs>
-    <linearGradient id="sdGrad" x1="12" y1="12" x2="52" y2="52" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#7C7CFF"/>
-      <stop offset="55%" stop-color="#A78BFA"/>
-      <stop offset="100%" stop-color="#67E8F9"/>
-    </linearGradient>
+    <linearGradient id="atile" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14265E"/><stop offset="1" stop-color="#0A1128"/></linearGradient>
+    <linearGradient id="arim" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00E5FF"/><stop offset="1" stop-color="#1E90FF"/></linearGradient>
+    <linearGradient id="atop" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00E5FF"/><stop offset="1" stop-color="#1E90FF"/></linearGradient>
+    <linearGradient id="amid" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1E90FF"/><stop offset="1" stop-color="#3F7BFF"/></linearGradient>
+    <linearGradient id="abot" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3F7BFF"/><stop offset="1" stop-color="#7C5CFF"/></linearGradient>
   </defs>
-  <rect width="64" height="64" rx="16" fill="#07070C"/>
-  <path d="M32 13L13 22.5L32 32L51 22.5L32 13Z" fill="url(#sdGrad)"/>
-  <path d="M13 32L32 41.5L51 32" stroke="url(#sdGrad)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M13 41.5L32 51L51 41.5" stroke="#F4F4F8" stroke-opacity="0.4" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="8" y="8" width="496" height="496" rx="112" fill="url(#atile)" stroke="url(#arim)" stroke-width="8"/>
+  <g transform="translate(256 256) scale(1.24) translate(-256 -256)">
+    <path d="M136 232L256 288L376 232V256L256 312L136 256Z" fill="url(#amid)"/>
+    <path d="M136 274L256 330L376 274V298L256 354L136 298Z" fill="url(#abot)"/>
+    <path d="M256 158L376 214L256 270L136 214Z" fill="url(#atop)"/>
+    <g fill="none" stroke="#0A1128" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M236 199L220 214L236 229"/>
+      <path d="M276 199L292 214L276 229"/>
+      <path d="M262 197L250 231"/>
+    </g>
+  </g>
 </svg>

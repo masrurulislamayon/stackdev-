@@ -1,18 +1,27 @@
+import { useState } from 'react';
 import {
   ArrowRight,
+  Award,
   Code2,
   Database,
   ExternalLink,
   GraduationCap,
   MapPin,
   Server,
+  Sparkles,
+  Users,
   Wrench,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { buildBreadcrumbSchema, Seo } from '@/src/components/seo';
+import { PageGlow } from '@/src/components/motion';
 import { ConsultationBanner } from '@/src/components/sections/ConsultationBanner';
+import { buildBreadcrumbSchema, Seo } from '@/src/components/seo';
 import { buttonStyles, Card, Container, SectionHeading } from '@/src/components/ui';
 import {
+  ABOUT_EDUCATION,
+  ABOUT_HOW_WE_WORK_STEPS,
+  ABOUT_SELECTED_PROJECTS,
+  ABOUT_WHO_WE_WORK_WITH,
   FOUNDER_PROFILE,
   PROFILE_LINKS,
   SKILL_GROUPS,
@@ -22,17 +31,19 @@ import { BRAND } from '@/src/data/brand';
 import { STATIC_SEO } from '@/src/data/seo';
 import { pickLocalized } from '@/src/data/services';
 import { useTranslation } from '@/src/i18n';
-import { PageGlow } from '@/src/components/motion';
 
 const SKILL_ICONS = {
   frontend: Code2,
   backend: Server,
   database: Database,
   tools: Wrench,
+  aiTools: Sparkles,
 } as const;
 
 export function AboutPage() {
   const { locale, t } = useTranslation();
+  const [photoFailed, setPhotoFailed] = useState(false);
+
   const meta = STATIC_SEO.about;
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: t('nav.home'), path: '/' },
@@ -47,6 +58,7 @@ export function AboutPage() {
         path="/about"
         jsonLd={breadcrumbSchema}
       />
+
       {/* Editorial Hero */}
       <section className="border-b border-border pt-16 pb-16 sm:pt-24 sm:pb-24 relative overflow-hidden">
         <PageGlow />
@@ -86,12 +98,26 @@ export function AboutPage() {
           <div className="grid gap-8 lg:grid-cols-12 items-start">
             <Card padding="lg" className="lg:col-span-8 space-y-6">
               <div className="flex flex-col sm:flex-row sm:items-center gap-5">
-                <div
-                  aria-hidden="true"
-                  className="flex h-16 w-16 shrink-0 items-center justify-center rounded-[16px] gradient-border bg-accent-soft text-lg font-extrabold text-accent-text font-brand"
-                >
-                  {FOUNDER_PROFILE.initials}
-                </div>
+                {photoFailed ? (
+                  <div
+                    aria-hidden="true"
+                    className="flex h-20 w-20 sm:h-24 sm:w-24 shrink-0 items-center justify-center rounded-[18px] gradient-border bg-accent-soft text-xl font-extrabold text-accent-text font-brand shadow-[var(--shadow-sm)]"
+                  >
+                    {FOUNDER_PROFILE.initials}
+                  </div>
+                ) : (
+                  <div className="h-20 w-20 sm:h-24 sm:w-24 shrink-0 overflow-hidden rounded-[18px] border border-border-strong bg-bg-subtle shadow-[var(--shadow-sm)]">
+                    <img
+                      src={FOUNDER_PROFILE.photoSrc}
+                      alt={FOUNDER_PROFILE.photoAlt}
+                      loading="lazy"
+                      decoding="async"
+                      onError={() => setPhotoFailed(true)}
+                      className="h-full w-full object-cover object-top"
+                    />
+                  </div>
+                )}
+
                 <div className="space-y-1">
                   <p className="type-eyebrow text-accent-text">
                     {t('aboutPage.founderSectionLabel')}
@@ -105,9 +131,14 @@ export function AboutPage() {
                 </div>
               </div>
 
-              <p className="type-body-lg text-fg/90 max-w-[64ch]">
-                {pickLocalized(FOUNDER_PROFILE.bio, locale)}
-              </p>
+              <div className="space-y-4">
+                <p className="type-body-lg text-fg/90 max-w-[64ch]">
+                  {pickLocalized(FOUNDER_PROFILE.bio, locale)}
+                </p>
+                <p className="type-body text-fg-muted max-w-[68ch] leading-relaxed">
+                  {pickLocalized(FOUNDER_PROFILE.extendedBio, locale)}
+                </p>
+              </div>
 
               <div className="flex flex-col gap-3 border-t border-border pt-5 text-sm text-fg-muted">
                 <p className="flex items-start gap-2.5">
@@ -162,7 +193,7 @@ export function AboutPage() {
         </Container>
       </section>
 
-      {/* Skills Grouped as Mono Chips */}
+      {/* Technologies & Skills Grouped as Mono Chips */}
       <section className="border-b border-border py-[72px] lg:py-[128px]">
         <Container className="space-y-10 view-reveal">
           <SectionHeading
@@ -170,7 +201,7 @@ export function AboutPage() {
             description={t('aboutPage.skillsDescription')}
           />
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {SKILL_GROUPS.map((group) => {
               const Icon = SKILL_ICONS[group.id];
               return (
@@ -201,7 +232,154 @@ export function AboutPage() {
         </Container>
       </section>
 
-      {/* How we work principles */}
+      {/* Selected Projects */}
+      <section className="border-b border-border py-[72px] lg:py-[128px]">
+        <Container className="space-y-10 view-reveal">
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+            <SectionHeading
+              title={t('aboutPage.projectsTitle')}
+              description={t('aboutPage.projectsDescription')}
+            />
+            <Link
+              to="/work"
+              className={buttonStyles({ variant: 'secondary', size: 'md', className: 'shrink-0' })}
+            >
+              <span>{t('aboutPage.viewAllWork')}</span>
+              <ArrowRight className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
+            </Link>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            {ABOUT_SELECTED_PROJECTS.map((project) => (
+              <Card key={project.id} padding="lg" className="flex h-full flex-col justify-between gap-5">
+                <div className="space-y-3">
+                  <h3 className="type-h3 text-fg">
+                    <Link
+                      to={`/work/${project.slug}`}
+                      className="hover:text-accent-text transition-colors duration-150"
+                    >
+                      {pickLocalized(project.title, locale)}
+                    </Link>
+                  </h3>
+                  <p className="type-body-sm text-fg-muted max-w-[64ch]">
+                    {pickLocalized(project.description, locale)}
+                  </p>
+                </div>
+
+                <ul className="flex flex-wrap gap-2 pt-2 border-t border-border">
+                  {project.techStack.map((tech) => (
+                    <li
+                      key={tech}
+                      className="rounded-full border border-border bg-bg-subtle px-2.5 py-1 font-mono text-xs text-fg/90"
+                    >
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Education & Certificates */}
+      <section className="border-b border-border py-[72px] lg:py-[128px]">
+        <Container className="space-y-10 view-reveal">
+          <SectionHeading title={t('aboutPage.educationTitle')} />
+
+          <div className="grid gap-6 lg:grid-cols-12 items-start">
+            <Card padding="lg" className="lg:col-span-7 space-y-5">
+              <div className="flex items-start gap-3.5">
+                <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-[12px] gradient-border bg-accent-soft/60 text-accent-text">
+                  <GraduationCap className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
+                </span>
+                <div className="space-y-1">
+                  <h3 className="type-h3 text-fg">
+                    {pickLocalized(ABOUT_EDUCATION.degree, locale)}
+                  </h3>
+                  <p className="type-body-sm font-medium text-fg-muted">
+                    {pickLocalized(ABOUT_EDUCATION.courseworkLabel, locale)}
+                  </p>
+                </div>
+              </div>
+
+              <ul className="flex flex-wrap gap-2 pt-2 border-t border-border">
+                {ABOUT_EDUCATION.coursework.map((course) => (
+                  <li
+                    key={course}
+                    className="rounded-full border border-border bg-bg-subtle px-3 py-1 font-mono text-xs text-fg/90"
+                  >
+                    {course}
+                  </li>
+                ))}
+              </ul>
+            </Card>
+
+            <Card padding="lg" className="lg:col-span-5 space-y-5">
+              <div className="flex items-start gap-3.5">
+                <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-[12px] gradient-border bg-accent-soft/60 text-accent-text">
+                  <Award className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
+                </span>
+                <h3 className="type-h3 text-fg">
+                  {pickLocalized(ABOUT_EDUCATION.certificatesLabel, locale)}
+                </h3>
+              </div>
+
+              <ul className="space-y-2.5 pt-2 border-t border-border">
+                {ABOUT_EDUCATION.certificates.map((cert) => (
+                  <li
+                    key={cert}
+                    className="rounded-[12px] border border-border bg-bg-subtle/50 px-3.5 py-2.5 font-mono text-xs font-medium text-fg"
+                  >
+                    {cert}
+                  </li>
+                ))}
+              </ul>
+            </Card>
+          </div>
+        </Container>
+      </section>
+
+      {/* How We Work (4 steps) */}
+      <section className="border-b border-border py-[72px] lg:py-[128px]">
+        <Container className="space-y-10 view-reveal">
+          <SectionHeading title={t('aboutPage.howWeWorkTitle')} />
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {ABOUT_HOW_WE_WORK_STEPS.map((step) => (
+              <Card key={step.number} padding="md" className="space-y-3">
+                <p className="font-mono text-xs font-medium text-accent-text tabular-nums">
+                  {step.number}
+                </p>
+                <h3 className="type-h4 text-fg">
+                  {pickLocalized(step.title, locale)}
+                </h3>
+                <p className="type-body-sm text-fg-muted">
+                  {pickLocalized(step.description, locale)}
+                </p>
+              </Card>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Who We Work With */}
+      <section className="border-b border-border py-[72px] lg:py-[128px]">
+        <Container className="space-y-8 view-reveal">
+          <SectionHeading title={t('aboutPage.whoWeWorkWithTitle')} />
+
+          <Card padding="lg" className="flex items-start gap-4">
+            <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-[12px] gradient-border bg-accent-soft/60 text-accent-text">
+              <Users className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
+            </span>
+            <p className="type-body-lg text-fg/90 max-w-[72ch]">
+              {pickLocalized(ABOUT_WHO_WE_WORK_WITH, locale)}
+            </p>
+          </Card>
+        </Container>
+      </section>
+
+      {/* Guiding Principles */}
       <section className="border-b border-border bg-bg-subtle/40 py-[72px] lg:py-[128px]">
         <Container className="space-y-10 view-reveal">
           <SectionHeading

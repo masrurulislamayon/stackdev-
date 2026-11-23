@@ -41,6 +41,7 @@ export function ProjectsGrid() {
               <div className="img-zoom">
                 <ProjectThumbnail
                   variant={project.thumbnailVariant}
+                  src={project.thumbnailSrc}
                   label={title}
                 />
               </div>
