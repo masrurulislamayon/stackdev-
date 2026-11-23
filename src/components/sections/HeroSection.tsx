@@ -1,11 +1,13 @@
 import { Fragment } from 'react';
 import { ArrowRight, Check } from 'lucide-react';
+import { m } from 'motion/react';
 import { Link } from 'react-router-dom';
 import {
   FloatingShapes,
   Magnetic,
   Marquee,
   Parallax,
+  Tilt,
 } from '@/src/components/motion';
 import { Badge, buttonStyles, Container } from '@/src/components/ui';
 import { pickLocalized, SERVICES } from '@/src/data/services';
@@ -70,54 +72,86 @@ export function HeroSection() {
       />
 
       <Container className="relative">
-        <div className="max-w-3xl space-y-7">
-          <div>
-            <Badge variant="primary" pulseDot>
-              {t('home.hero.eyebrow')}
-            </Badge>
+        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
+          {/* Left Copy Column - rendered at opacity 1 immediately for instant LCP */}
+          <div className="lg:col-span-6 space-y-7">
+            <div>
+              <Badge variant="primary" pulseDot>
+                {t('home.hero.eyebrow')}
+              </Badge>
+            </div>
+
+            <h1 className="type-display text-fg">
+              {renderStyledHeroTitle(t('home.hero.title'), locale)}
+            </h1>
+
+            <p className="type-body-lg text-fg-muted max-w-[54ch]">
+              {t('home.hero.subtitle')}
+            </p>
+
+            <div className="flex flex-wrap items-center gap-3.5 pt-1">
+              <Magnetic>
+                <Link
+                  to="/contact"
+                  className={buttonStyles({ variant: 'primary', size: 'lg' })}
+                >
+                  {t('home.hero.primaryCta')}
+                  <ArrowRight className="h-4 w-4" strokeWidth={1.75} aria-hidden="true" />
+                </Link>
+              </Magnetic>
+              <Magnetic>
+                <Link
+                  to="/pricing"
+                  className={buttonStyles({ variant: 'secondary', size: 'lg' })}
+                >
+                  {t('home.hero.secondaryCta')}
+                </Link>
+              </Magnetic>
+            </div>
+
+            <ul className="flex flex-wrap items-center gap-x-4 gap-y-2.5 pt-2 text-sm text-fg-muted">
+              {trustItems.map((item, idx) => (
+                <Fragment key={item}>
+                  {idx > 0 && (
+                    <li aria-hidden="true" className="hidden sm:block h-3.5 w-px bg-border" />
+                  )}
+                  <li className="inline-flex items-center gap-2">
+                    <Check className="h-4 w-4 shrink-0 text-accent-text" strokeWidth={1.75} aria-hidden="true" />
+                    <span>{item}</span>
+                  </li>
+                </Fragment>
+              ))}
+            </ul>
           </div>
 
-          <h1 className="type-display text-fg">
-            {renderStyledHeroTitle(t('home.hero.title'), locale)}
-          </h1>
-
-          <p className="type-body-lg text-fg-muted max-w-[54ch]">
-            {t('home.hero.subtitle')}
-          </p>
-
-          <div className="flex flex-wrap items-center gap-3.5 pt-1">
-            <Magnetic>
-              <Link
-                to="/contact"
-                className={buttonStyles({ variant: 'primary', size: 'lg' })}
-              >
-                {t('home.hero.primaryCta')}
-                <ArrowRight className="h-4 w-4" strokeWidth={1.75} aria-hidden="true" />
-              </Link>
-            </Magnetic>
-            <Magnetic>
-              <Link
-                to="/pricing"
-                className={buttonStyles({ variant: 'secondary', size: 'lg' })}
-              >
-                {t('home.hero.secondaryCta')}
-              </Link>
-            </Magnetic>
-          </div>
-
-          <ul className="flex flex-wrap items-center gap-x-4 gap-y-2.5 pt-2 text-sm text-fg-muted">
-            {trustItems.map((item, idx) => (
-              <Fragment key={item}>
-                {idx > 0 && (
-                  <li aria-hidden="true" className="hidden sm:block h-3.5 w-px bg-border" />
-                )}
-                <li className="inline-flex items-center gap-2">
-                  <Check className="h-4 w-4 shrink-0 text-accent-text" strokeWidth={1.75} aria-hidden="true" />
-                  <span>{item}</span>
-                </li>
-              </Fragment>
-            ))}
-          </ul>
+          {/* Right Visual Column */}
+          <m.div
+            initial={{ y: 12 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:col-span-6"
+          >
+            <Tilt max={5}>
+              <div className="relative mx-auto w-full max-w-[600px] py-2 select-none">
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -inset-6 rounded-[32px] opacity-80 blur-3xl"
+                  style={{
+                    background:
+                      'radial-gradient(circle at 48% 45%, color-mix(in srgb, var(--accent) 20%, transparent), color-mix(in srgb, var(--accent-2) 10%, transparent) 52%, transparent 75%)',
+                  }}
+                />
+                <img
+                  src="/assets/aistudio/Group_4__3__c7f48720.png"
+                  alt={t('home.hero.visualAriaLabel')}
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                  className="relative z-10 mx-auto h-auto w-full object-contain drop-shadow-[0_24px_48px_rgba(11,11,18,0.16)] dark:drop-shadow-[0_24px_56px_rgba(0,0,0,0.55)]"
+                />
+              </div>
+            </Tilt>
+          </m.div>
         </div>
       </Container>
 
